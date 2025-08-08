@@ -37,7 +37,7 @@ Video mode 2 is used. The video driver configures the CRTC in 64x32 characters t
 The floppy driver seems to work. /dev/fd0 is drive A and /dev/fd1 is drive B. fd0 is hard coded to one side and fd1 to double side. A minimal system
 root disk image is generated to boot from fd1. Format is 9 sectors per track with sector ID from 1 to 9.
 
-The IDE driver works and the USB mass storage of the Albireo using the ch375 driver used in other platforms also works. It should be easy to get it working with the Usifac/Ulifac and a second Albireo with alternate I/O ports.
+The IDE driver works and the USB mass storage of the Albireo and the USIfAC2/ULIfAC using the CH376 module driver also works, for this the CH375/CH376 driver used in other platforms has been modified to suport simultaneously several devices via serial or parallel connection
 
 The Makefile generate a dsk image (fuzix.dsk) to load Fuzix form basic with run"fuzix" command. Also a snapshot is generated as alternative load method.
 
@@ -54,9 +54,9 @@ This has been tested with Putty conecting the usifac to a linux box using a USB-
 
 ## TODO
 
-Configurable screen, at least add 80x25, maybe also change the video mode and routines to manage 6x8 fonts.
-Support more hardware: M4 Board (storage, network and RTC), Ulifac/Usifac storage, networking with wifi module plugged in the usifac, sdcard in the
-Albireo.
+Configurable screen, at least add or change to 80x25, maybe also change the video mode and routines to manage 6x8 fonts.
+Resolve certain issues with network support, neither the NET4CPC driver nor the driver for the SLIP protocol using the serial port of the USIfAC/ULIfAC work correctly.
+Support more hardware: M4 Board (storage, network and RTC).
 
 Fix lots of bugs.
 
