@@ -2189,6 +2189,10 @@ static int action_restore(void)
 static void moveitem(uint8_t i, uint8_t l)
 {
   uint8_t *p = game.objloc + i;
+  if (*p == 255)
+    game.carried--;
+  if (l == 255)
+    game.carried++;
   if (*p == game.location)
     redraw |= REDRAW_MAYBE;
   if (l == game.location)
@@ -2493,7 +2497,7 @@ void process_light(void)
       return;
     }
   }
-  if (game.lighttime > 25)
+  if (game.lighttime > 25 || (l != 255 && l != game.location))
     return;
   strout_lower(lightoutin);
   decout_lower(game.lighttime);
