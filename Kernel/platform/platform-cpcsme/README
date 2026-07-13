@@ -1,3 +1,7 @@
+# Project moved to Codeberg
+
+This repository is no longer maintained here. Please use the Codeberg repository instead.
+
 # Amstrad CPC with Standard Memory Expansions
 
 Currently, standard RAM expansions up to 1024KiB are supported using the thunked memory model, alternating complete 64K blocks in the RAM space visible to the CPU. This gives a total amount of 1088K of usable RAM on all Amstrad CPC models.
