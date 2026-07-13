@@ -1,4 +1,6 @@
-**MOVED TO CODEBERG**
+# Project moved to Codeberg
+
+This repository is no longer maintained here. Please use the Codeberg repository instead.
 
 ** ENGINEERING WORK IN PROGRESS **
 
